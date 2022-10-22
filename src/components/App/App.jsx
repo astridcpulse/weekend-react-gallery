@@ -32,6 +32,7 @@ function App() {
         </header>
         <GalleryList 
           galleryItems={picList}
+          getPics={getPics}
         />
         {/* TODO remove example image */}
         <img src="images/goat_small.jpg"/> 
