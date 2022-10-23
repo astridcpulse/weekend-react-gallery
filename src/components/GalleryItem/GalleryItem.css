@@ -1,16 +1,26 @@
 
 .picBlock{
     margin: 10px 10px auto 10px;
+
     padding: 10px;
     background-color: whitesmoke;
     border-radius: 3px;
     box-shadow: 6px 4px 15px 2px black;
+    font-family: 'Mansalva', sans-serif;
+    width: 220px;
+    height: 300px;
 }
+
 img{
     border: 3px solid #171717de;
     border-radius: 2px;
 }
 
+
 button{
     background-color: rgb(173, 173, 226);
+    font-family: 'Mansalva', sans-serif;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 2px;
 }

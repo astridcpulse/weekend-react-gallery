@@ -5,16 +5,16 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 import GalleryList from '../GalleryList/GalleryList';
 import { useState, useEffect} from 'react';
 
-  
-
 function App() {
   const [picList, setPicList] = useState([]);
 
 
   useEffect(() => {
     getPics()
+    
   }, [])
 
+  
   const getPics = () => {
     axios.get('/gallery')
     .then(response => {
@@ -29,7 +29,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Astrid's photos</h1>
         </header>
         <GalleryList 
           galleryItems={picList}

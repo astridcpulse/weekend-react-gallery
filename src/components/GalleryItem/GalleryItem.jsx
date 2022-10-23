@@ -22,9 +22,12 @@ function GalleryItem ({galleryItem, getPics}){
         })
     }
 
+    
+
     return(
         <>
         <section className="picBlock">
+            
             {active ? (
                 <div className="active">
                 <img
@@ -49,7 +52,7 @@ function GalleryItem ({galleryItem, getPics}){
                     className="likeBtn"
                     onClick={likeFunc}
                     id={galleryItem.id}
-                    >LIKE</button>
+                    ><i className="fa fa-heart"></i>LOVE</button>
             </div>
         </section>
         </>
