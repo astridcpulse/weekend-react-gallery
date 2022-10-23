@@ -1,7 +1,14 @@
 import axios from 'axios';
+import { useState } from 'react'
 
 function GalleryItem ({galleryItem, getPics}){
+    const [active, setActive] = useState(true);
 
+    const handleActive = () => {
+        setActive((previousStatus) => {
+          return !previousStatus;
+        });
+      };
 
     const likeFunc = (evt) => {
         
@@ -16,7 +23,25 @@ function GalleryItem ({galleryItem, getPics}){
 
     return(
         <>
-            <img src={galleryItem.path}/> 
+           
+            {active ? (
+                <div className="active">
+                <img
+                    
+                    src={galleryItem.path}
+                    onClick={() => handleActive()}
+                />
+                </div>
+                ) : (
+
+                <div
+                    className="inactive"
+                    onClick={() => handleActive()}
+                > 
+                <h2>{galleryItem.description}</h2>
+                </div>
+            )}
+
             <section className="likeCnt">
                 {galleryItem.likes}
                 <button 
@@ -25,8 +50,7 @@ function GalleryItem ({galleryItem, getPics}){
                     id={galleryItem.id}
                     >LIKE</button>
             </section>
-
-            </>
+        </>
     );
 }
 

@@ -10,6 +10,7 @@ import { useState, useEffect} from 'react';
 function App() {
   const [picList, setPicList] = useState([]);
 
+
   useEffect(() => {
     getPics()
   }, [])
@@ -22,8 +23,8 @@ function App() {
     })
     .catch(error => {
       console.log('GETting failed', error);
-    })
-  }
+    });
+  };
 
     return (
       <div className="App">
@@ -33,9 +34,8 @@ function App() {
         <GalleryList 
           galleryItems={picList}
           getPics={getPics}
+          
         />
-        {/* TODO remove example image */}
-        <img src="images/goat_small.jpg"/> 
       </div>
     );
 }

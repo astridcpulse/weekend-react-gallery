@@ -13,3 +13,12 @@
   font-size: 1.5em;
 }
 
+.active{
+  width: 200px;
+
+  margin: auto;
+}
+.inactive{
+  width: 200px;
+  margin: auto;
+}
