@@ -1,10 +1,16 @@
+
+
 .App {
   text-align: center;
   background-image: url("/public/images/cork_board.jpg");
   background-size: 100%;
-  border: solid burlywood 10px;
+  border: 20px solid transparent;
+  padding: 15px;
+  border-image: url("/public/images/wood_border.jpg") 80 30 30 30 round stretch;
+  box-shadow: inset 4px 4px 20px 1px black;
   
 }
+
 
 .App-header {
   background-color: #222;
@@ -24,8 +30,7 @@
 }
 
 .active{
-  width: 200px;
-
+  width: auto;
   margin: auto;
 }
 .inactive{
