@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-image: url("/public/images/cork_board.jpg");
+  background-size: 100%;
+  border: solid burlywood 10px;
+  
 }
 
 .App-header {
@@ -11,6 +15,12 @@
 
 .App-title {
   font-size: 1.5em;
+}
+
+.picBoard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .active{

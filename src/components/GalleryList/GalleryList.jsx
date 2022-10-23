@@ -6,6 +6,7 @@ function GalleryList({galleryItems, getPics}){
 
     return(
         <>
+        <section className="picBoard">
             {galleryItems.map(galleryItem => {
                 return <GalleryItem 
                         galleryItem={galleryItem}
@@ -13,6 +14,7 @@ function GalleryList({galleryItems, getPics}){
                         getPics={getPics}
                         />
             })}
+        </section>
         </>
     );
 }

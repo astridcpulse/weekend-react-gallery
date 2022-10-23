@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react'
+import './GalleryItem.css';
 
 function GalleryItem ({galleryItem, getPics}){
     const [active, setActive] = useState(true);
@@ -23,7 +24,7 @@ function GalleryItem ({galleryItem, getPics}){
 
     return(
         <>
-           
+        <section className="picBlock">
             {active ? (
                 <div className="active">
                 <img
@@ -42,14 +43,15 @@ function GalleryItem ({galleryItem, getPics}){
                 </div>
             )}
 
-            <section className="likeCnt">
+            <div className="likeCnt">
                 {galleryItem.likes}
                 <button 
                     className="likeBtn"
                     onClick={likeFunc}
                     id={galleryItem.id}
                     >LIKE</button>
-            </section>
+            </div>
+        </section>
         </>
     );
 }

@@ -1,0 +1,8 @@
+
+.picBlock{
+    margin: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 6px 4px 15px 2px black;
+}
