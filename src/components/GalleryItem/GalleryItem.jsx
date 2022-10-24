@@ -47,7 +47,7 @@ function GalleryItem ({galleryItem, getPics}){
             )}
 
             <div className="likeCnt">
-                {galleryItem.likes}
+                <p>{galleryItem.likes} people like this!</p>
                 <button 
                     className="likeBtn"
                     onClick={likeFunc}
