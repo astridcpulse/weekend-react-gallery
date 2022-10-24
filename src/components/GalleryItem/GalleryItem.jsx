@@ -14,7 +14,7 @@ function GalleryItem ({galleryItem, getPics}){
     const likeFunc = (evt) => {
         
         let picId = evt.target.id;
-        console.log('asdkfj', picId)
+        console.log('picId', picId)
         axios.put(`/gallery/like/${picId}`)
         .then((response) => {
             console.log('likefunc response', response)
